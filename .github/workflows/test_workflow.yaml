@@ -1,9 +1,6 @@
 name: Test python file
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   run-script:
