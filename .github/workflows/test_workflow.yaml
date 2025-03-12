@@ -1,0 +1,25 @@
+name: Test python file
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-script:
+    name: Test python file
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"  # Change to match your Python version
+
+      - name: Run Python Script
+        run: python3 test.py  # Replace with your script name
+
+
